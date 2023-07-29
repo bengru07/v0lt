@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@300&family=Montserrat:wght@500&display=swap');
+
+:root {
+    --shrink-size: 1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Handjet', cursive;
+    cursor: none;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, span {
+    opacity: .85;
+    user-select: none;
+    color: white;
+}
+
+body {
+    height: 1000vh;
+    background: #000;
+}
+
+#main-title {
+    color: white;
+    text-align: center;
+    font-size: calc(13vw + 1.5rem);
+    user-select: none;
+    margin-top: 10vh;
+    animation: fade-in 2.25s ease-in-out;
+}
+
+#options {
+  display: flex;
+  width: 100%;
+  height: 25vh;
+}
+
+#cursor-trail {
+    position: fixed;
+    width: 1em;
+    height: 1em;
+    z-index: -1;
+    border-radius: 50%;
+    background: #f00;
+    pointer-events: none;
+    animation-fill-mode: forwards;
+}
+
+
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: .85;
+    }
+}
+
+@keyframes grow {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(3);
+    }
+}
+
+@keyframes shrink {
+    0% {
+        transform: scale(var(--shrink-size));
+    }
+    100% {
+        transform: scale(.75);
+    }
+}
