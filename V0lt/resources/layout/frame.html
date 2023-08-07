@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            cursor: none;
+        }
+
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black" >
+    <div class="h-12"></div>
+    <header class="flex justify-center">
+        <h1 class="text-white font-semibold text-6xl">V0lt</h1>
+
+        <div class="space-x-8">
+            <img src="../logo.png" class="w-56 h-auto">
+            <div class="w-2 h-"></div>
+        </div>
+    </header>
+
+    <main class="flex justify-center">
+
+    </main>
+
+    <nav class="w-full h-16 bg-white shadow-lg">
+        <div class="flex justify-between h-full mx-4">
+            <div class="flex items-center space-x-2">
+                <a href="https://if-schleife.de">Sex 1</a>
+                <a href="https://if-schleife.de">Sex 1</a>
+            </div>
+            <div class="flex items-center space-x-2">
+                <img src="../logo.png" class="h-8 w-auto">
+            </div>
+        </div>
+    </nav>
+
+    <img id="mausoleum" src="https://media.discordapp.net/attachments/1027110324081537044/1103420241977028728/866471470896513035.gif" style="position: absolute; z-index: -999999999999">
+
+    <script>
+        const elem = document.getElementById("mausoleum");
+
+        window.addEventListener('mousemove', function(event) {
+            elem.style.top = event.clientY-50+"px"
+            elem.style.left = event.clientX-50+"px"
+
+            const hue = (Math.random()) * 360
+            elem.style.backgroundColor = `hsl(${hue}, 100%, 50%)`;
+        });
+    </script>
+
+</body>
+</html>

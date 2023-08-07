@@ -1,17 +1,47 @@
 <!DOCTYPE html>
 <html lang="en" >
   <head>
+
     <meta charset="UTF-8">
     <title>V0lt</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <link rel="icon" href="../resources/icon.png">
+
   </head>
   <body>
     <div id="cursor-trail"></div>
-    <h1 id="main-title" class="big-hover">V0lt</h1>
-    <h2 id="sub-title">A simple, fast, and secure password manager.</h2>
-    <div id="options">
+    <div id="nav-container">
+      <div id="navigation">
+        <div class="nav-contain big-hover" id="login" onclick="changeSite('./login.html')">
+          <img class="nav-img" alt="profile" src="../resources/profile.png">
+          <span class="nav-item">Login</span>
+        </div>
+      </div>
+    </div>
 
+    <h1 id="main-title" class="big-hover" onclick="clickCount++;">V0lt</h1>
+    <h2 class="sub-title">A way of gaming</h2>
+    <div class="banner big-hover" onclick="window.scrollTo({
+      top: document.querySelector('#options').offsetTop - 350,
+      behavior: 'smooth'
+    })">
+      <h1 class="banner-title">The pure Gaming experience</h1>
+    </div>
+
+
+    <div id="options">
+      <div class="option big-hover hidden" id="games">
+        <img src="../resources/games.png" class="option-img" alt="Games" onclick="changeSite('../resources/layout/frame.html')">
+        <h3 class="option-title">Games</h3>
+        <p class="option-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At</p>
+      </div>
+      <div id="border" class="hidden"></div>
+      <div class="option big-hover hidden" id="gaming" onclick="changeSite('../resources/layout/frame.html')">
+        <img src="../resources/gaming.png" class="option-img" alt="Gaming">
+        <h3 class="option-title">Gaming articles</h3>
+        <p class="option-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At</p>
+      </div>
     </div>
 
   </body>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>V0lt - Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="icon" href="../resources/icon.png">
+    <script src="login.js" defer></script>
+</head>
+<body>
+    <div id="login-container">
+        <div id="login" class="start" style="z-index: 3">
+            <h1 class="start-header">Login</h1>
+            <input type="text" id="l-username" class="text-input" placeholder="Username">
+            <input type="text" id="l-password" class="text-input" placeholder="Password">
+            <button type="button" id="l-submit" class="submit-button" onclick="submitLogin()">Submit</button>
+        </div>
+        <div id="sign-up" class="start">
+            <h1 class="start-header">Sign up</h1>
+            <input type="text" id="s-username" class="text-input" placeholder="Username">
+            <input type="text" id="s-password" class="text-input" placeholder="Password">
+            <input type="text" id="s-password-repeat" class="text-input" placeholder="Repeat password">
+            <button type="button" id="s-submit" class="submit-button" onclick="submitSignUp()">Submit</button>
+        </div>
+        <span id="login-title" style="color: white; position: absolute; bottom: 0; cursor: pointer" onclick="changeStart()">Don't have an account yet?</span>
+    </div>
+</body>
+</html>
